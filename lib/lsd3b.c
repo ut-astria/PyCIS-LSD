@@ -579,7 +579,7 @@ double * LineSegmentDetectionCenterb( int * n_out,
     } 
   }
 
-  printf("\nSTAGE2 %d/%d updated, %d/%d originals, %d/%d deleted... in %.2f\n",ls_count2,ls_count,ls_count2reject,ls_count,(ls_count-ls_count2-ls_count2reject),ls_count,omp_get_wtime()-timeall);fflush(stdout); 
+  //printf("\nSTAGE2 %d/%d updated, %d/%d originals, %d/%d deleted... in %.2f\n",ls_count2,ls_count,ls_count2reject,ls_count,(ls_count-ls_count2-ls_count2reject),ls_count,omp_get_wtime()-timeall);fflush(stdout); 
 
 
    /*

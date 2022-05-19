@@ -193,12 +193,11 @@ def main(I,I0, folder='results',name='temp',
     markov = getp
     if markov>1:
         if markov==2:
-            #print('\n--------------- MARKOV-PARALLEL: %s ---------------\n'%name,flush=True)              
-            print('MARKOV-PARALLEL: %s'%name,flush=True)  
+            pass
+            #print('\n--------------- MARKOV-PARALLEL: %s ---------------\n'%name,flush=True)  
         else:
+            pass
             #print('\n--------------- MARKOV-ORTHOGONAL: %s ---------------\n'%name,flush=True)  
-            print('MARKOV-ORTHOGONAL: %s'%name,flush=True)  
-
         time.sleep(1)
         lines = pycis.pycis(I,M,N,O,I0,M0,N0,O0,inputv,inputvorth,markov)
         del I, I0, alpha, density, angth, a,d,t,inputv,I_full,I0_full
@@ -211,14 +210,13 @@ def main(I,I0, folder='results',name='temp',
         #Find kernel and run estimation...
         savename='%s/data1_%s'%(folder,name)
         if markov==1: #markov = 1, run markov estimation plus edge detection 
+            pass
             #print('\n--------------- LSD + Markov: %s ---------------\n'%name,flush=True)    
-            print('LSD + Markov: %s'%name,flush=True)    
         elif markov==0 and M0==0: #markov=0, edges with prior markov
+            pass
             #print('\n--------------- LSD (Edge): %s ---------------\n'%name,flush=True)      
-            print('LSD (Edge): %s'%name,flush=True)      
         elif markov==0 and M0>0: #markov=0, centerlines with prior markov
             #print('\n--------------- LSD (Centers): %s ---------------\n'%name,flush=True)   
-            print('LSD (Centers): %s'%name,flush=True)   
             savename = '%s/data2_%s'%(folder,name) 
         elif markov<0: #markov = 1, run markov estimation plus edge detection 
             pass

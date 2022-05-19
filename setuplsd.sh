@@ -46,7 +46,7 @@
 
 if type "sbatch" >& /dev/null; then
     module load gcc/9.1
-    module load cmake/3.10.2
+    module load cmake/3.16.1 #10.2
     module load python3/3.8.2
 fi
 
